@@ -1,0 +1,31 @@
+
+.appForm{
+  margin-bottom: 30px;
+}
+
+.btnAdd{
+  width: 200px;
+  height: 30px;
+}
+
+.list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.check{
+  margin: 0 10px;
+}
+
+.todosList{
+  display: flex;
+  align-items: center;
+}
+
+.btnColum{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}

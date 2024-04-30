@@ -1,18 +1,21 @@
 {
   "todos": [
     {
-      "id": "1",
-      "title": "todo 1",
-      "description": "lorem ipsum dolor sit amet, consectetur adip",
-      "checked": "false",
-      "creationDate": "дата створення"
+      "id": "aa0e",
+      "title": "edrtyujjhgfd",
+      "description": "fgthyjkjhgf",
+      "completed": false,
+      "creationDate": "2024-04-30T18:55:38.435Z"
     },
     {
-      "id": "2",
-      "title": "todo 2",
-      "description": "lorem ipsum dolor sit amet, consectetur adip",
-      "checked": "false",
-      "creationDate": "дата створення"
+      "id": "6ccb",
+      "title": "aswedrftgyhgf",
+      "description": "rftgyhuygfd",
+      "completed": false,
+      "creationDate": "2024-04-30T18:55:53.394Z"
+    },
+    {
+      "id": "a3b7"
     }
   ]
 }
