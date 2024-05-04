@@ -1,52 +1,35 @@
+import { Routes, Route, Link } from 'react-router-dom';
 
-import { useEffect, useState } from 'react';
-import styles from './App.module.css';
-import  axios  from 'axios'
 import TodoForm from './TodoForm';
-import TodoList from './TodoList';
+import styles from './App.module.css';
+import Home from './Home';
+import About from './About';
+
 
 function App() {
-  const [todos, setTodos] = useState([]);
-  
-
-  useEffect(() => {
-    const getTodosList = async () => {
-      try{const todosList = await axios.get(`http://localhost:3030/todos`);
-        setTodos(todosList.data);
-      } catch (error) {
-        console.error('Помилка', error);
-      }
-    };
-    getTodosList();
-  }, []);
-
-  console.log(todos);
-
-  
-  const handleAddTodo = async () => {
-  try {
-    await axios.post('http://localhost:3030/todos');
-  } catch (error) {
-    console.error('Error adding todos:', error);
-  }
-};
 
   return (
+    <>
+     <header className={styles.header}>
+        <Link to='/'>Home</Link>
+        <Link to='/addtodo'> AddTodo</Link> 
+        <Link to='/about'>About</Link>
+      </header>
+       
     <div className="App">
-      <form onSubmit={handleAddTodo}>
-        <label  htmlFor="todos-input">Нове завдання:</label>
-        <>
-          {todos.length === 0 ? (
-             <div>
-               <p>Наразі у вас немає ще завдань</p>
-               <button className={styles.btnAdd} type='submit'>Додати</button>
-             </div>) : (<TodoForm/>)}
-        </>
-      </form>
 
-      <TodoList/>
-     
+      <main>
+        <Routes>
+            <Route path='/' element={<Home/>} />
+          <Route path='/addtodo' element={<TodoForm/>}/>
+            <Route path='/about' element={<About/>} />
+          <Route path='/404' element/>
+        </Routes>
+      </main>
+        
     </div>
+    </>
+   
   );
 }
 

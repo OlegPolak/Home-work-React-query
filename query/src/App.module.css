@@ -1,5 +1,35 @@
 
-.appForm{
+.header{
+  background-color: #282c34;
+  color: #61dafb;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px 0;
+}
+
+.divMargin{
+  margin: 100px 0;
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeTitle{
+  font-size: 80px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.homeText{
+  font-size: 40px;
+  color: aliceblue;
+}
+
+.form{
   margin-bottom: 30px;
 }
 
@@ -28,4 +58,34 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
+}
+
+.search{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.select{
+  width: 80px;
+}
+
+.aboutTitle{
+  font-size: 30px;
+}
+
+.aboutText{
+  width: 800px;
+}
+
+.aboutList{
+  margin: 0 20px;
+  padding-bottom: 30px;
+  color: aliceblue;
+}
+
+.itemTitle{
+  text-transform: uppercase;
+  color: #61dafb;
 }

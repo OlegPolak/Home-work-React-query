@@ -3,13 +3,13 @@ import axios from 'axios';
 import styles from './App.module.css';
 import EditTodoForm from './EditTodoForm'; 
 
-const TodoList = () => {
-  const [todos, setTodos] = useState([]);
-  const [editTodoId, setEditTodoId] = useState(null);
-  const [filter, setFilter] = useState('all');
-  const [search, setSearch] = useState('');
-
-  useEffect(() => {
+const AllTodo = () => {
+const [todos, setTodos] = useState([]);
+const [editTodoId, setEditTodoId] = useState(null);
+const [filter, setFilter] = useState('all');
+const [search, setSearch] = useState('');
+    
+useEffect(() => {
     const getTodosList = async () => {
       try {
         const todosList = await axios.get('http://localhost:3030/todos');
@@ -69,11 +69,10 @@ const TodoList = () => {
     (todos.description && todos.description.toLowerCase().includes(search.toLowerCase()))
   );
 });
-
-
+    
   return (
-    <div className={styles.search}>
-    <select className={styles.select} value={filter} onChange={(e) => setFilter(e.target.value)}>
+    <>
+    <select value={filter} onChange={(e) => setFilter(e.target.value)}>
         <option value="all">Всі</option>
         <option value="active">Активні</option>
         <option value="completed">Завершені</option>
@@ -92,7 +91,7 @@ const TodoList = () => {
         <EditTodoForm todo={todo} onSave={handleSaveTodo} />
       ) : (
         <div className={styles.todosList}>
-          {todo.title} {todo.description}
+          {todo.title} {todo.description} {todo.completed} {todo.creationDate}
           <input className={styles.check} type="checkbox" checked={todo.completed} onChange={() => toggleTodosCompletion(todo.id)} />
           <div className={styles.btnColum}>
             <button type="button" onClick={() => handleEditTodo(todo.id)}>Редагувати</button>
@@ -103,8 +102,8 @@ const TodoList = () => {
     </li>
   ))}
 </ul>
-</div>
+</>
   );
 }
 
-export default TodoList;
+export default AllTodo

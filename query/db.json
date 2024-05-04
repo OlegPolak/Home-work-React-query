@@ -1,21 +1,20 @@
 {
   "todos": [
     {
-      "id": "aa0e",
-      "title": "edrtyujjhgfd",
-      "description": "fgthyjkjhgf",
       "completed": false,
-      "creationDate": "2024-04-30T18:55:38.435Z"
+      "id": "f9cf"
     },
     {
-      "id": "6ccb",
-      "title": "aswedrftgyhgf",
-      "description": "rftgyhuygfd",
       "completed": false,
-      "creationDate": "2024-04-30T18:55:53.394Z"
+      "id": "85b3"
     },
     {
-      "id": "a3b7"
+      "completed": true,
+      "id": "99bf"
+    },
+    {
+      "completed": false,
+      "id": "6975"
     }
   ]
 }
