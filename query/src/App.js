@@ -1,9 +1,11 @@
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, NavLink } from 'react-router-dom';
 
 import TodoForm from './TodoForm';
 import styles from './App.module.css';
 import Home from './Home';
 import About from './About';
+import NotFound from './NotFound';
+
 
 
 function App() {
@@ -11,9 +13,9 @@ function App() {
   return (
     <>
      <header className={styles.header}>
-        <Link to='/'>Home</Link>
-        <Link to='/addtodo'> AddTodo</Link> 
-        <Link to='/about'>About</Link>
+        <NavLink to='/'>Home</NavLink>
+        <NavLink to='/addtodo'> AddTodo</NavLink> 
+        <NavLink to='/about'>About</NavLink>
       </header>
        
     <div className="App">
@@ -21,9 +23,9 @@ function App() {
       <main>
         <Routes>
             <Route path='/' element={<Home/>} />
-          <Route path='/addtodo' element={<TodoForm/>}/>
+            <Route path='/addtodo' element={<TodoForm />} />
             <Route path='/about' element={<About/>} />
-          <Route path='/404' element/>
+            <Route path='*' element={<NotFound/>} />
         </Routes>
       </main>
         

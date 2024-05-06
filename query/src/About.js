@@ -1,9 +1,10 @@
 import React from 'react'
 import styles from './App.module.css';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
-      <div className={styles.divMargin}>
+      <div className={styles.divMarginAbout}>
           <h3 className={styles.aboutTitle}>Опис сайту</h3>
           <p className={styles.aboutText}>Цей код - це компонент <u>React</u>, який відповідає за форму додавання нових завдань (todo). Давай розберемо його по частинах:</p>
           <ul className={styles.aboutList}>
@@ -33,6 +34,7 @@ const About = () => {
               </li>
           </ul>
           <p>Цей компонент використовується для взаємодії з користувачем у додаванні нових завдань у додатку.</p>
+           <Link to='/'>&gt;Натисніть,щоб перейти на головну сторінку&lt;</Link>
     </div>
   )
 }

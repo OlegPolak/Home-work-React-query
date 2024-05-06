@@ -42,11 +42,15 @@ p {
 
 a{
   text-decoration: none;
-  color: #61dafb;
+  color: aliceblue;
 }
 
 a:hover{
-  color: azure;
+  color: #61dafb;
+}
+
+.active{
+  color: #61dafb;
 }
 
 ul {

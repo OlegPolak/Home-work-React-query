@@ -7,7 +7,7 @@ const Home = () => {
     <div className={styles.divMargin}>
           <h1 className={styles.homeTitle}>Ласкаво просимо</h1>
           <p className={styles.homeText}>Ви завітали на сайт для планування</p>
-          <Link to='/addtodo'>Натисніть,щоб перейти до планування</Link>
+          <Link to='/addtodo'>&gt;Натисніть,щоб перейти до планування&lt;</Link>
     </div>
   )
 }

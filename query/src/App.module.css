@@ -13,9 +13,17 @@
 .divMargin{
   margin: 100px 0;
   display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.divMarginAbout{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .homeTitle{
@@ -26,7 +34,6 @@
 
 .homeText{
   font-size: 40px;
-  color: aliceblue;
 }
 
 .form{
