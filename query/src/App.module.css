@@ -96,3 +96,8 @@
   text-transform: uppercase;
   color: #61dafb;
 }
+
+.inputLog{
+  width: 200px;
+  height: 20px;
+}

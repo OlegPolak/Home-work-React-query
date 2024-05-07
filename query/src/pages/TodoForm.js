@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import styles from './App.module.css';
-import TodoList from './TodoList';
+import styles from '../App.module.css';
+import TodoList from '../components/TodoList';
 
 function TodoForm() {
   const [todos, setTodos] = useState([]);
   const [newTodo, setNewTodo] = useState({ title: '', description: '', completed: false, creationDate: new Date().toISOString() });
   const [isPosting, setIsPosting] = useState(false); 
   const [showCreateForm, setShowCreateForm] = useState(false); 
+  
 
   useEffect(() => {
     const getTodosList = async () => {
@@ -21,6 +22,7 @@ function TodoForm() {
     getTodosList();
   }, []);
 
+// console.log(todos);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -85,7 +87,6 @@ function TodoForm() {
           <button className={styles.btnAdd} type="submit" disabled={isPosting}>
             {isPosting ? 'Зачекайте...' : 'Додати'}
              </button>
-             {/* <button className={styles.btnAdd} type="submit">Додати</button> */}
         </form>
       )}
        <TodoList/>
